@@ -357,9 +357,6 @@ tables:
     - *area
     - *service
     - *usage
-    mapping:
-      route:
-      - ferry
 
 # etldoc: imposm3 -> osm_highway_polygon
   highway_polygon:
