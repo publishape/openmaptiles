@@ -247,6 +247,88 @@ tables:
       - driveway
       - parking_aisle
 
+# etldoc: imposm3 -> osm_railway_linestring
+  railway_linestring:
+    type: linestring
+    _resolve_wikidata: false
+    columns:
+    - name: osm_id
+      type: id
+    - name: geometry
+      type: geometry
+    - key: railway
+      name: railway
+      type: string
+    - *ref
+    - *network
+    - *z_order
+    - *layer
+    - *level
+    - *indoor
+    - *name
+    - *name_en
+    - *name_de
+    - name: tags
+      type: hstore_tags
+    - *short_name
+    - *tunnel
+    - *bridge
+    - *ramp
+    - *ford
+    - *oneway
+    - *area
+    - *service
+    - *usage
+    mapping:
+      railway:
+      - rail
+      - narrow_gauge
+      - preserved
+      - funicular
+      - subway
+      - light_rail
+      - monorail
+      - tram
+
+# etldoc: imposm3 -> osm_aerialway_linestring
+  aerialway_linestring:
+    type: linestring
+    _resolve_wikidata: false
+    columns:
+    - name: osm_id
+      type: id
+    - name: geometry
+      type: geometry
+    - key: aerialway
+      name: aerialway
+      type: string
+    - *z_order
+    - *layer
+    - *name
+    - *name_en
+    - *name_de
+    - name: tags
+      type: hstore_tags
+    - *short_name
+    - *tunnel
+    - *bridge
+    - *ramp
+    - *ford
+    - *oneway
+    - *area
+    - *service
+    - *usage
+    mapping:
+      aerialway:
+      - chair_lift
+      - drag_lift
+      - platter
+      - t-bar
+      - gondola
+      - cable_car
+      - j-bar
+      - mixed_lift
+
 # etldoc: imposm3 -> osm_highway_polygon
   highway_polygon:
     type: polygon
